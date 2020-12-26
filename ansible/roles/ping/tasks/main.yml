@@ -1,0 +1,3 @@
+- name: "Ping the host"
+  ping:
+    data: success

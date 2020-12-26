@@ -1,0 +1,15 @@
+- name: "Update the package list"
+  become: yes
+  command: apt --assume-yes update
+
+- name: "Upgrades the packages"
+  become: yes
+  command: apt --assume-yes upgrade
+
+- name: "Clears the caches"
+  become: yes
+  command: apt --assume-yes autoremove
+
+- name: "Install openvpn"
+  become: yes
+  command: apt --assume-yes install openvpn

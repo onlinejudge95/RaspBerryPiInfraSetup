@@ -1,0 +1,5 @@
+---
+- hosts: commandcenter
+  roles:
+    - ping
+    - updates
