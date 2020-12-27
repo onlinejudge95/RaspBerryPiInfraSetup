@@ -14,6 +14,10 @@ ansible-lint \
     -x 301 \
     ansible/playbooks/commandcenter.yml
 
+if [[ $? -ne 0 ]]; then
+    exit 1
+fi
+
 ansible-playbook \
     --ask-become-pass \
     --inventory-file ansible/inventory/raspberrypi \
