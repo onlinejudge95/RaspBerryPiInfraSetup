@@ -10,6 +10,10 @@ fi
 USER=$1
 PRIVATE_KEY_FILE_PATH=$2
 
+ansible-lint \
+    -x 301 \
+    ansible/playbooks/commandcenter.yml
+
 ansible-playbook \
     --ask-become-pass \
     --inventory-file ansible/inventory/raspberrypi \
